@@ -21,8 +21,8 @@ node ('devops')  {
      secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
 		    ]])
 		    {	        
-   sh 'AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_DEFAULT_REGION=eu-west-3  sh chmod 777 PushS3  $version $commitcode'
-    sh 'AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_DEFAULT_REGION=eu-west-3  sh ./PushS3  $version $commitcode'
+   sh 'AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_DEFAULT_REGION=eu-west-3  chmod 777 PushS3  $version $commitcode'
+    sh 'AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_DEFAULT_REGION=eu-west-3   ./PushS3  $version $commitcode'
         
              }
 	}
