@@ -1,4 +1,4 @@
-
+#!bin/bash
 readarray -t Array1 <<<  "$(for i in $repository/$2/* ; do md5sum $i ; done )"
 
 aws s3 cp $repository/$2  s3://devopsnxt/$1/  --recursive --exclude "premd5sum.out"
