@@ -1,4 +1,4 @@
-node ('ubuntu')  {
+node ('devops')  {
      // Wipe the workspace so we are building completely clean
     deleteDir()
 	stage("Download Artifcats") {	     
