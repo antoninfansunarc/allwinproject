@@ -1,9 +1,9 @@
 #!/bin/bash
-repositorypath="pa-art.liveaction.com/artifactory/app-snapshot-local/com/liveaction/LiveActionClient/$1"
 
-readarray -t Array1 <<<  "$(for i in $repositorypath/$2/* ; do md5sum $i ; done )"
 
-aws s3 cp $repositorypath/$2  s3://devopsnxt/$1/  --recursive --exclude "premd5sum.out"
+readarray -t Array1 <<<  "$(for i in $repository/$2/* ; do md5sum $i ; done )"
+
+aws s3 cp $repository/$2  s3://devopsnxt/$1/  --recursive --exclude "premd5sum.out"
 
 aws s3 cp s3://devopsnxt/test  s3downlaod/  --recursive\
 
