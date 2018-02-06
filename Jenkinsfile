@@ -16,7 +16,7 @@ node ('ubuntu')  {
      secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
 		    ]])
 		    {	        
-    sh 'AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_DEFAULT_REGION=us-west-1  sh ./PushS3  $version $commitcode'
+    sh 'AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_DEFAULT_REGION=eu-west-3  sh ./PushS3  $version $commitcode'
         
              }
 	}
