@@ -6,7 +6,7 @@ node ('devops')  {
 	   checkout scm 
 	}
 	stage("Download Artifcats") {
-		sh 'chmod + PullArtifcats'
+		sh 'chmod 777 PullArtifcats'
 	sh './PullArtifcats $version $commitcode'
              
          }
