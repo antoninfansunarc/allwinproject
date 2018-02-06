@@ -1,6 +1,10 @@
 node ('devops')  {
      // Wipe the workspace so we are building completely clean
     deleteDir()
+	
+	stage("Pull the code") {
+	   checkout scm 
+	}
 	stage("Download Artifcats") {	     
 	sh 'PullArtifcats $version $commitcode'
              
