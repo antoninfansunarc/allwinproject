@@ -8,7 +8,7 @@ node ('devops')  {
 	stage("Download Artifcats") {
 		sh 'chmod 777 PullArtifcats'
 		sh 'chmod 777 PushS3'
-	//sh './PullArtifcats $version $commitcode'
+	sh './PullArtifcats $version $commitcode'
              
          }
         
