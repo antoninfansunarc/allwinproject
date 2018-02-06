@@ -2,7 +2,7 @@ node ('devops')  {
      // Wipe the workspace so we are building completely clean
     deleteDir()
 	stage("Download Artifcats") {	     
-	sh './PullArtifcats $version $commitcode'
+	sh 'PullArtifcats $version $commitcode'
              
          }
         
@@ -16,7 +16,7 @@ node ('devops')  {
      secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
 		    ]])
 		    {	        
-    sh 'AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_DEFAULT_REGION=eu-west-3  sh ./PushS3  $version $commitcode'
+    sh 'AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_DEFAULT_REGION=eu-west-3  sh PushS3  $version $commitcode'
         
              }
 	}
