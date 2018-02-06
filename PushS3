@@ -1,5 +1,5 @@
 #!/bin/bash
-repositorypath=pa-art.liveaction.com/artifactory/app-snapshot-local/com/liveaction/LiveActionClient/$1
+repositorypath = pa-art.liveaction.com/artifactory/app-snapshot-local/com/liveaction/LiveActionClient/$1
 
 readarray -t Array1 <<<  "$(for i in $repositorypath/$2/* ; do md5sum $i ; done )"
 
