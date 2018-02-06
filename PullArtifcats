@@ -2,5 +2,5 @@
 repositorypath=pa-art.liveaction.com/artifactory/app-snapshot-local/com/liveaction/LiveActionClient/$1/$2/
 repositoryurl=https://pa-art.liveaction.com/artifactory/app-snapshot-local/com/liveaction/LiveActionClient/$1/$2/
 repository=pa-art.liveaction.com/artifactory/app-snapshot-local/com/liveaction/LiveActionClient/$1
-##wget -r -np $repositorypath
+wget -r -np $repositorypath
 
