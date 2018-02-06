@@ -1,5 +1,3 @@
-#!/bin/bash
-
 
 readarray -t Array1 <<<  "$(for i in $repository/$2/* ; do md5sum $i ; done )"
 
